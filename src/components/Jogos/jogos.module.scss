@@ -1,0 +1,74 @@
+$light-color: #f5f6fa;
+$text-color: #636e72;
+$text-light: #b2bec3;
+
+
+.containerGeral {
+    padding-bottom: 30px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+    //border: 2px solid red;
+    color: $text-color;
+}
+
+.container_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    //border: 2px solid purple;
+    margin-top: 20px;
+}
+
+.card {
+    width: 50vw;
+    height: 12vh;
+    //border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $light-color;
+    margin-bottom: 6vh;
+    border-radius: 20px;
+}
+
+.name {
+    //border: 2px solid red;
+}
+
+.cardJogadores {
+    display: flex;
+
+    img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardJogadores {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .card {
+        width: 95%;
+        height: 15vh;
+    }
+
+    .name {
+        //border: 2px solid red;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {}

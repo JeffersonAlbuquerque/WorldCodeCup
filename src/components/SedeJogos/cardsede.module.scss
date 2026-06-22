@@ -1,0 +1,94 @@
+$light-color: white;
+$background: #000000;
+
+@mixin box-shadow {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@mixin transition($property: all, $duration: 0.3s, $easing: ease) {
+    transition: $property $duration $easing;
+}
+
+
+.cardSede {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: $light-color;
+    border-radius: 15px;
+    //border: 2px solid red;
+    width: 20vw;
+    height: 55vh;
+    @include box-shadow;
+    @include transition;
+
+    .perfil {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+
+        //border: 2px solid red;
+        .title {
+            font-size: 15px;
+        }
+
+        .logoFifa {
+            width: 2vw;
+            background-color: $background;
+            border-radius: 50px;
+        }
+    }
+
+    .imgLocal {
+        border-radius: 10px;
+        width: 60%;
+    }
+
+    .pontinhos {
+        width: 2vw;
+    }
+
+}
+
+.topoCard {
+    display: flex;
+    align-items: center;
+    //border: 2px solid red;
+    width: 90%;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+
+
+    .cardSede {
+        width: 100%;
+        //border: 2px solid red;
+
+        .perfil {
+            //border: 2px solid blue;
+            width: 80%;
+
+            .title {
+                font-size: 15px;
+            }
+
+            .logoFifa {
+                width: 7vw;
+            }
+        }
+
+        .imgLocal {
+            width: 70%;
+        }
+
+        .pontinhos {
+            width: 5vw;
+        }
+    }
+
+}
+
+@media (max-width: 480px) {}

@@ -10,8 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@prismicio/client": "^7.21.8",
+    "@prismicio/react": "^3.4.1",
+    "axios": "^1.18.0",
+    "prismic": "^1.11.0",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.18.0",
+    "sass": "^1.101.0",
+    "swiper": "^12.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

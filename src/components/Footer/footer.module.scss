@@ -1,0 +1,48 @@
+
+
+.letreirofifaworld {
+    background-color: #000000;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 7vh;
+
+    img {
+        width: 3vw;
+    }
+
+    p {
+        font-size: 23px;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+        //border: 2px solid red;
+        text-align: center;
+        width: 20vw;
+        font-family: "Phonk", sans-serif;
+    }
+}
+
+.carrousel {
+    :global(.swiper-wrapper) {
+        transition-timing-function: linear !important;
+    }
+}
+@media (max-width: 768px) {
+    .content
+    {
+        img
+        {
+            width: 10vw;
+        }
+        p
+        {
+            font-size: 10px;
+            width: 35%;
+            text-align: center;
+            //border: 2px solid red;
+        }
+    }
+}

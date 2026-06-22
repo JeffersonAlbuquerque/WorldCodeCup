@@ -1,0 +1,61 @@
+.cardSede {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  width: 20vw;
+  height: 55vh;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.cardSede .perfil {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+}
+.cardSede .perfil .title {
+  font-size: 15px;
+}
+.cardSede .perfil .logoFifa {
+  width: 2vw;
+  background-color: #000000;
+  border-radius: 50px;
+}
+.cardSede .imgLocal {
+  border-radius: 10px;
+  width: 60%;
+}
+.cardSede .pontinhos {
+  width: 2vw;
+}
+
+.topoCard {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .cardSede {
+    width: 100%;
+  }
+  .cardSede .perfil {
+    width: 80%;
+  }
+  .cardSede .perfil .title {
+    font-size: 15px;
+  }
+  .cardSede .perfil .logoFifa {
+    width: 7vw;
+  }
+  .cardSede .imgLocal {
+    width: 70%;
+  }
+  .cardSede .pontinhos {
+    width: 5vw;
+  }
+}/*# sourceMappingURL=cardsede.module.css.map */

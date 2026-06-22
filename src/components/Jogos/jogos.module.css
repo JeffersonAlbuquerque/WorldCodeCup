@@ -1,0 +1,55 @@
+.containerGeral {
+  padding-bottom: 30px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 20vh;
+  color: #636e72;
+}
+
+.container_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.card {
+  width: 50vw;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f5f6fa;
+  margin-bottom: 6vh;
+  border-radius: 20px;
+}
+
+.cardJogadores {
+  display: flex;
+}
+.cardJogadores img {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .cardJogadores {
+    display: flex;
+    flex-direction: column;
+  }
+  .cardJogadores img {
+    width: 100%;
+  }
+  .card {
+    width: 95%;
+    height: 15vh;
+  }
+  .name {
+    font-size: 10px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=jogos.module.css.map */

@@ -1,0 +1,30 @@
+
+
+.containerGeral {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards {
+    width: 80%;
+
+    .swiper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        //border: 2px solid red;
+        width: 50vw;
+        height: 60vh;
+    }
+}
+.carrousel {
+  :global(.swiper-wrapper) {
+    transition-timing-function: linear !important;
+  }
+}
+@media (max-width: 768px) 
+{
+
+}
+@media (max-width: 480px) {}

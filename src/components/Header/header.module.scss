@@ -1,0 +1,145 @@
+$cor-fundo: #181818;
+$cor-texto: #d5d5d5;
+$cor-hover: #4a6fa5;
+$cor-ativo: #2a4a7c;
+
+$transicao: 0.2s ease;
+$breakpoint-mobile: 768px;
+
+.header {
+    width: 100%;
+    background-color: $cor-fundo;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    width: 100%;
+    //border: 2px solid blue;
+
+}
+
+.headerList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+    gap: 3rem;
+    //border: 2px solid yellow;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    //border: 2px solid orange;
+    width: 10vw;
+    text-align: center;
+
+    a {
+        color: $cor-texto;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+
+        border-bottom: 2px solid transparent;
+        transition: $transicao;
+
+        &:hover {
+            color: $cor-hover;
+            border-bottom-color: $cor-hover;
+        }
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImage {
+    height: 70px;
+    display: block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Escondidos no Desktop */
+.mobileTop {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobileTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 1rem;
+    }
+
+    .hamburger {
+        display: block;
+
+        background: none;
+        border: none;
+
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .headerList {
+        display: none;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 1rem;
+
+        width: 100%;
+        height: auto;
+
+        padding: 1rem 0;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .menu {
+        width: 100%;
+
+        a {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+        }
+    }
+
+    /* Esconde a logo do meio */
+    .headerList .logo {
+        display: none;
+    }
+
+    .logoImage {
+        height: 55px;
+    }
+}

@@ -1,0 +1,88 @@
+$cor-fundo: #181818;
+
+.title {
+    font-size: 52px;
+    color: white;
+    height: 40vh;
+}
+
+.containerPai {
+    background-color: $cor-fundo;
+    //border: 2px solid red;
+    padding-bottom: 40px;
+}
+
+.containerGrupos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    //border: 2px solid blue;
+}
+
+.logo {
+
+    width: 20vw;
+    //border: 2px solid orange;
+
+}
+
+.cardGrupos1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    //border: 2px solid yellow;
+
+    img {
+        margin-bottom: 10px;
+        width: 16vw;
+    }
+}
+
+.cardGrupos2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    img {
+        margin-bottom: 10px;
+        width: 16vw;
+    }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+    .title {
+        font-size: 30px;
+        color: white;
+        height: 20vh;
+    }
+
+    .containerGrupos {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        //border: 2px solid red;
+        //border: 2px solid blue;
+    }
+    .logo
+    {
+        width: 40vw;
+    }
+    .cardGrupos1
+    {
+        img{
+            width: 70vw;
+        }
+    }
+    .cardGrupos2
+    {
+        img{
+            width: 70vw;
+        }
+    }
+}
+
+@media (max-width: 480px) {}

@@ -1,0 +1,65 @@
+.title {
+  font-size: 52px;
+  color: white;
+  height: 40vh;
+}
+
+.containerPai {
+  background-color: #181818;
+  padding-bottom: 40px;
+}
+
+.containerGrupos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 20vw;
+}
+
+.cardGrupos1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cardGrupos1 img {
+  margin-bottom: 10px;
+  width: 16vw;
+}
+
+.cardGrupos2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cardGrupos2 img {
+  margin-bottom: 10px;
+  width: 16vw;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 30px;
+    color: white;
+    height: 20vh;
+  }
+  .containerGrupos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .logo {
+    width: 40vw;
+  }
+  .cardGrupos1 img {
+    width: 70vw;
+  }
+  .cardGrupos2 img {
+    width: 70vw;
+  }
+}/*# sourceMappingURL=grupos.module.css.map */
