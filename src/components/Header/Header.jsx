@@ -4,6 +4,7 @@ import s from './header.module.scss';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/WorldCupHeader/fifaWorldCupLogo.png';
+import logo2 from '../../assets/logoBotecoHexa.png'
 
 export default function Header() {
     const [menuAberto, setMenuAberto] = useState(false);
@@ -15,7 +16,7 @@ export default function Header() {
 
                     <div className={s.mobileTop}>
                         <img
-                            src={logo}
+                            src={logo2}
                             alt="Logo da Copa"
                             className={s.logoImage}
                         />
@@ -38,32 +39,32 @@ export default function Header() {
 
                         <li className={s.menu}>
                             <Link to="cardapio-tematico">
-                                Cardápio Temático
+                                Jogos
                             </Link>
                         </li>
 
                         <li className={s.menu}>
-                            <a href="">Eventos</a>
+                            <a href="">Cardápio</a>
                         </li>
 
                         <li className={s.logo}>
                             <img
-                                src={logo}
+                                src={logo2}
                                 alt="Logo da Copa"
                                 className={s.logoImage}
                             />
                         </li>
 
                         <li className={s.menu}>
-                            <a href="">Seleções</a>
+                            <a href="">Agenda</a>
                         </li>
 
                         <li className={s.menu}>
-                            <a href="">Estádios</a>
+                            <a href="">Reservas</a>
                         </li>
 
                         <li className={s.menu}>
-                            <a href="">Onde Assistir</a>
+                            <a href="">Localização</a>
                         </li>
                     </ul>
 
