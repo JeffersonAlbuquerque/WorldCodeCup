@@ -1,0 +1,35 @@
+.containerGeral {
+  width: 100%;
+  min-height: 60vh;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+    padding-bottom: 10vh;
+  h1 {
+    color: #fff;
+    font-size: 3vw;
+    margin-bottom: 6vh;
+    text-align: center;
+  }
+}
+
+.cards {
+  width: 90vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel {
+  width: 100%;
+}
+
+.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

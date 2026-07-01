@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import video from '../../assets/WorldCupHeader/Video/video5.mp4';
 import s from './main.module.scss';
 
 export default function Main() {
+  const [mobile, setMobile] = useState(false);
+
   return (
     <>
       <section className={s.hero}>
@@ -41,8 +44,8 @@ export default function Main() {
               <span className={s.vs}>VS</span>
 
               <div className={s.time}>
-                <h2>SRB</h2>
-                <span>SÉRVIA</span>
+                <h2>NOR</h2>
+                <span>NORUEGA</span>
               </div>
             </div>
 
