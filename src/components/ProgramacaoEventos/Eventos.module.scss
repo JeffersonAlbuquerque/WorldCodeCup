@@ -1,0 +1,263 @@
+.programacao {
+  padding: 80px 0;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .subtitulo {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffd700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: #ffd700;
+      margin: 8px auto 0;
+    }
+  }
+
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+
+    span {
+      color: #ffd700;
+    }
+  }
+
+  > p {
+    font-size: 18px;
+    color: #999;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 48px;
+    background: #141414;
+    padding: 4px;
+    border-radius: 10px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #1a1a1a;
+
+    button {
+      flex: 1;
+      padding: 12px 20px;
+      border: none;
+      background: transparent;
+      color: #666;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: #fff;
+        background: #1a1a1a;
+      }
+
+      &.active {
+        background: #ffd700;
+        color: #0a0a0a;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 18px 24px;
+    border-radius: 10px;
+    border: 1px solid #1a1a1a;
+    transition: all 0.2s;
+
+    &:hover {
+      border-color: #ffd700;
+      background: #141414;
+    }
+
+    &.destaque {
+      border-color: #ffd700;
+      background: #1a1a0a;
+
+      .tag {
+        background: #ffd700;
+        color: #0a0a0a;
+        font-weight: 700;
+      }
+    }
+
+    .esquerda {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .icone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      color: #ffd700;
+      flex-shrink: 0;
+
+      .card:hover & {
+        background: #ffd700;
+        color: #0a0a0a;
+      }
+    }
+
+    .hora {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffd700;
+      min-width: 55px;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0;
+      text-align: left;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: #1a1a1a;
+      color: #666;
+      border: 1px solid #222;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+  }
+
+  // Responsivo
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .tabs {
+      flex-wrap: wrap;
+      max-width: 100%;
+
+      button {
+        padding: 10px 16px;
+        font-size: 13px;
+        flex: 1;
+        min-width: 70px;
+      }
+    }
+
+    .card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 16px 18px;
+
+      .esquerda {
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .icone {
+        width: 38px;
+        height: 38px;
+      }
+
+      .hora {
+        font-size: 15px;
+        min-width: 48px;
+      }
+
+      h3 {
+        font-size: 15px;
+      }
+
+      .tag {
+        margin-left: 0;
+        align-self: flex-start;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 26px;
+    }
+
+    > p {
+      font-size: 15px;
+    }
+
+    .card {
+      .esquerda {
+        gap: 8px;
+      }
+
+      .icone {
+        width: 34px;
+        height: 34px;
+      }
+
+      .hora {
+        font-size: 13px;
+        min-width: 42px;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+    }
+  }
+}
