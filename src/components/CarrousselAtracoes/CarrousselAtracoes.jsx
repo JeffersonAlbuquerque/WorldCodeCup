@@ -40,9 +40,9 @@ export default function CarrousselAtracoes() {
                         }}
                         breakpoints={{
                             0: { slidesPerView: 2 },         // Dispositivos muito pequenos (até ~320px)
-                            360: { slidesPerView: 2},       // Celulares pequenos (Galaxy S8, etc.)
-                            480: { slidesPerView: 2 },     // Celulares médios
-                            640: { slidesPerView: 2 },     // Celulares maiores
+                            360: { slidesPerView: 1},       // Celulares pequenos (Galaxy S8, etc.)
+                            480: { slidesPerView: 1 },     // Celulares médios
+                            640: { slidesPerView: 1 },     // Celulares maiores
                             768: { slidesPerView: 2 },       // Tablets em retrato
                             900: { slidesPerView: 2 },       // Tablets em paisagem
                             1024: { slidesPerView: 2 },      // Laptops pequenos

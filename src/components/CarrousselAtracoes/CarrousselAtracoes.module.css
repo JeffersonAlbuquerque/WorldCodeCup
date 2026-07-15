@@ -1,19 +1,18 @@
 .containerGeral {
   width: 100%;
   min-height: 60vh;
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-    padding-bottom: 10vh;
-  h1 {
-    color: #fff;
-    font-size: 3vw;
-    margin-bottom: 6vh;
-    text-align: center;
-  }
+  padding-bottom: 10vh;
+}
+.containerGeral h1 {
+  color: #fff;
+  font-size: 3vw;
+  margin-bottom: 6vh;
+  text-align: center;
 }
 
 .cards {
@@ -32,10 +31,9 @@
   justify-content: center;
   align-items: center;
 }
-@media(max-width: 768px)
-{
-  .containerGeral
-  {
-      min-height: 40vh;
+
+@media (max-width: 768px) {
+  .containerGeral {
+    min-height: 40vh;
   }
-}
+}/*# sourceMappingURL=CarrousselAtracoes.module.css.map */

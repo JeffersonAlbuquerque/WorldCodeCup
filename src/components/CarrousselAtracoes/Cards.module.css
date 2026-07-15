@@ -1,0 +1,8 @@
+.img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.5vw;
+  transition: 0.3s;
+  cursor: pointer;
+}/*# sourceMappingURL=Cards.module.css.map */

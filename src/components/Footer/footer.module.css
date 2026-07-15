@@ -1,36 +1,145 @@
-.letreirofifaworld {
-  background-color: #000000;
+.footer {
+  width: 100%;
+  background: #0f0f0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4rem 8vw 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.content {
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.titles h2 {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.titles .line {
+  width: 60px;
+  height: 4px;
+  background: #ffd000;
+  border-radius: 999px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+}
+.navigation li {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 7vh;
+  gap: 0.8rem;
 }
-.content img {
-  width: 3vw;
+.navigation li svg {
+  color: #ffd000;
+  flex-shrink: 0;
+  transition: 0.25s;
 }
-.content p {
-  font-size: 23px;
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
-  text-align: center;
-  width: 20vw;
-  font-family: "Phonk", sans-serif;
+.navigation li a {
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: 0.25s;
 }
-
-.carrousel :global(.swiper-wrapper) {
-  transition-timing-function: linear !important;
+.navigation li:hover svg,
+.navigation li:hover a {
+  color: #ffd000;
 }
 
-@media (max-width: 768px) {
-  .content img {
-    width: 10vw;
+.privacyP {
+  display: flex;
+  flex-direction: column;
+}
+.privacyP a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.privacyP a svg {
+  color: #ffd000;
+  flex-shrink: 0;
+}
+.privacyP a:hover {
+  color: #ffd000;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #d9d9d9;
+}
+.contact p svg {
+  color: #ffd000;
+  flex-shrink: 0;
+}
+
+.socialMedia {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+}
+.socialMedia nav {
+  display: flex;
+  justify-content: center;
+}
+
+.socialList {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+.socialList li a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #1b1b1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+}
+.socialList li a svg {
+  transition: 0.3s;
+}
+.socialList li a:hover {
+  background: #ffd000;
+  color: #111;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 3rem 6vw 2rem;
   }
-  .content p {
-    font-size: 10px;
-    width: 35%;
-    text-align: center;
+  .footerLinks {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .socialList {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=footer.module.css.map */

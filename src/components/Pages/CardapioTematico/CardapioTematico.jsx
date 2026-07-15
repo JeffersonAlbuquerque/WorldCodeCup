@@ -1,9 +1,11 @@
-import s from './cardapiotematico.module.scss';
-import { useEffect, useState } from 'react';
-import CardComida from './CardComida';
+import s from "./cardapiotematico.module.scss";
+import { useEffect, useState } from "react";
+import CardComida from "./CardComida";
 
-import { client } from '../../services/prismic';
-import { asText } from '@prismicio/client';
+import { client } from "../../services/prismic";
+import { asText } from "@prismicio/client";
+
+import lupa from "../../../assets/CardapioTematico/lupa.png";
 
 export default function CardapioTematico() {
     const [comidas, setComidas] = useState([]);
@@ -31,27 +33,87 @@ export default function CardapioTematico() {
     }, []);
 
     return (
-        <>
-        <section>
-            <nav>
-                <ul>
-                    <li><a href="">a</a></li>
-                </ul>
-            </nav>
-        </section>
-            <section className={s.containerCardapio}>
-                {comidas.map((comida) => (
-                    <CardComida
-                        key={comida.id}
-                        id={comida.id}
-                        title={comida.title}
-                        description={comida.description}
-                        imgUrl={comida.imgUrl}
-                        preco={comida.preco}
-                    />
-                ))}
-            </section>
-        </>
+        <section className={s.cardapio}>
+            <header className={s.header}>
+                <div className={s.titleArea}>
+                    <span className={s.subtitle}>Sabores do Mundo</span>
+                    <h2>Cardápio Temático</h2>
+                    <p>
+                        Explore pratos inspirados nas seleções participantes da Copa do
+                        Mundo e escolha o seu favorito.
+                    </p>
+                </div>
 
+                <div className={s.searchArea}>
+                    <div className={s.filter}>
+                        <img src={lupa} alt="Buscar" />
+                        <input type="search" placeholder="Buscar prato..." />
+                    </div>
+                </div>
+            </header>
+
+            <section className={s.countryFilter}>
+                <nav>
+                    <ul>
+                        <li>
+                            <a className={s.country} href="">
+                                Argentina
+                            </a>
+                        </li>
+
+                        <li>
+                            <a className={s.country} href="">
+                                Brasil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a className={s.country} href="">
+                                EUA
+                            </a>
+                        </li>
+
+                        <li>
+                            <a className={s.country} href="">
+                                Noruega
+                            </a>
+                        </li>
+
+                        <li>
+                            <a className={s.country} href="">
+                                Alemanha
+                            </a>
+                        </li>
+
+                        <li>
+                            <a className={s.country} href="">
+                                Escócia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a className={s.country} href="">
+                                Inglaterra
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+
+            <main className={s.content}>
+                <section className={s.containerCardapio}>
+                    {comidas.map((comida) => (
+                        <CardComida
+                            key={comida.id}
+                            id={comida.id}
+                            title={comida.title}
+                            description={comida.description}
+                            imgUrl={comida.imgUrl}
+                            preco={comida.preco}
+                        />
+                    ))}
+                </section>
+            </main>
+        </section>
     );
 }

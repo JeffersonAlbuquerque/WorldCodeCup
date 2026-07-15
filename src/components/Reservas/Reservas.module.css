@@ -1,0 +1,321 @@
+.container {
+  padding: 80px 0;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+.container .conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.container h1 {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.container > .conteudo > p {
+  font-size: 18px;
+  color: #999;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+.container .formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .grupoInput {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.container .grupoInput label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.container .grupoInput input,
+.container .grupoInput select,
+.container .grupoInput textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #111;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s;
+}
+.container .grupoInput input:focus,
+.container .grupoInput select:focus,
+.container .grupoInput textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  background: #141414;
+}
+.container .grupoInput input::-moz-placeholder, .container .grupoInput select::-moz-placeholder, .container .grupoInput textarea::-moz-placeholder {
+  color: #555;
+}
+.container .grupoInput input::placeholder,
+.container .grupoInput select::placeholder,
+.container .grupoInput textarea::placeholder {
+  color: #555;
+}
+.container .grupoInput textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.container .grupoInput select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ffd700' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+.container .grupoInput select option {
+  background: #111;
+  color: #fff;
+}
+.container .grupoInput input[type=date],
+.container .grupoInput input[type=time] {
+  cursor: pointer;
+}
+.container .grupoInput input[type=date]::-webkit-calendar-picker-indicator,
+.container .grupoInput input[type=time]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+.container .grupoInput input[type=number] {
+  -moz-appearance: textfield;
+}
+.container .grupoInput input[type=number]::-webkit-outer-spin-button, .container .grupoInput input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.container .linha {
+  display: flex;
+  gap: 20px;
+}
+.container .linha .grupoInput {
+  flex: 1;
+}
+.container .secaoLocalizacao {
+  margin-top: 40px;
+  padding: 30px;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #1a1a1a;
+}
+.container .secaoLocalizacao .cabecalhoLocalizacao {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.container .secaoLocalizacao .cabecalhoLocalizacao .iconeLocalizacao {
+  font-size: 28px;
+}
+.container .secaoLocalizacao .cabecalhoLocalizacao h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffd700;
+  margin: 0;
+}
+.container .secaoLocalizacao .informacoesLocalizacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.container .secaoLocalizacao .informacoesLocalizacao .endereco {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ccc;
+  margin: 0;
+}
+.container .secaoLocalizacao .informacoesLocalizacao .endereco strong {
+  color: #fff;
+  font-size: 18px;
+}
+.container .secaoLocalizacao .informacoesLocalizacao .botoesLocalizacao {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container .secaoLocalizacao .informacoesLocalizacao .botoesLocalizacao .botaoGps {
+  padding: 10px 20px;
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Inter", sans-serif;
+}
+.container .secaoLocalizacao .informacoesLocalizacao .botoesLocalizacao .botaoGps:hover {
+  border-color: #ffd700;
+  background: #141414;
+  transform: translateY(-2px);
+}
+.container .secaoLocalizacao .informacoesLocalizacao .botoesLocalizacao .botaoGps:active {
+  transform: translateY(0);
+}
+.container .secaoLocalizacao .containerMapa {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid #1a1a1a;
+}
+.container .secaoLocalizacao .containerMapa .mapa {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.container .secaoLocalizacao .rodapeLocalizacao {
+  text-align: center;
+}
+.container .secaoLocalizacao .rodapeLocalizacao .horarioFuncionamento {
+  font-size: 14px;
+  color: #888;
+  display: inline-block;
+  padding: 6px 16px;
+  background: #0a0a0a;
+  border-radius: 20px;
+  border: 1px solid #1a1a1a;
+}
+.container button[type=submit] {
+  width: 100%;
+  padding: 16px;
+  background: #ffd700;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Inter", sans-serif;
+  margin-top: 10px;
+}
+.container button[type=submit]:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+}
+.container button[type=submit]:active {
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 0;
+  }
+  .container h1 {
+    font-size: 32px;
+  }
+  .container h1::before {
+    font-size: 28px;
+  }
+  .container > .conteudo > p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .container .linha {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container .secaoLocalizacao {
+    padding: 20px;
+  }
+  .container .secaoLocalizacao .informacoesLocalizacao {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container .secaoLocalizacao .informacoesLocalizacao .botoesLocalizacao {
+    width: 100%;
+  }
+  .container .secaoLocalizacao .informacoesLocalizacao .botoesLocalizacao .botaoGps {
+    flex: 1;
+    text-align: center;
+  }
+  .container .secaoLocalizacao .containerMapa {
+    height: 200px;
+  }
+  .container .grupoInput input,
+  .container .grupoInput select,
+  .container .grupoInput textarea {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+  .container button[type=submit] {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 0;
+  }
+  .container .title {
+    font-size: 26px;
+  }
+  .container .title::before {
+    font-size: 22px;
+  }
+  .container > .conteudo > p {
+    font-size: 14px;
+  }
+  .container .secaoLocalizacao {
+    padding: 16px;
+  }
+  .container .secaoLocalizacao .cabecalhoLocalizacao .iconeLocalizacao {
+    font-size: 22px;
+  }
+  .container .secaoLocalizacao .cabecalhoLocalizacao h3 {
+    font-size: 18px;
+  }
+  .container .secaoLocalizacao .informacoesLocalizacao .endereco {
+    font-size: 14px;
+  }
+  .container .secaoLocalizacao .informacoesLocalizacao .endereco strong {
+    font-size: 16px;
+  }
+  .container .secaoLocalizacao .informacoesLocalizacao .botoesLocalizacao .botaoGps {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+  .container .secaoLocalizacao .containerMapa {
+    height: 160px;
+  }
+  .container .secaoLocalizacao .rodapeLocalizacao .horarioFuncionamento {
+    font-size: 12px;
+  }
+  .container .grupoInput label {
+    font-size: 12px;
+  }
+  .container .grupoInput input,
+  .container .grupoInput select,
+  .container .grupoInput textarea {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .container button[type=submit] {
+    padding: 12px;
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=Reservas.module.css.map */

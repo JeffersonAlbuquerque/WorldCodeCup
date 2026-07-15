@@ -1,40 +1,30 @@
-import { Beer, Trophy, Music2 } from "lucide-react";
+import { useEffect, useState } from "react";
 import s from "./Eventos.module.scss";
-
-const eventos = {
-    terca: [
-        {
-            hora: "15:00",
-            titulo: "Abertura da casa + happy hour",
-            tipo: "PROMO",
-            icone: <Beer size={26} />,
-            destaque: false,
-        },
-        {
-            hora: "16:00",
-            titulo: "Transmissão: Brasil x Sérvia",
-            tipo: "JOGO",
-            icone: <Trophy size={26} />,
-            destaque: true,
-        },
-        {
-            hora: "16:00",
-            titulo: "Chopp em dobro durante os 90 minutos",
-            tipo: "PROMO",
-            icone: <Beer size={26} />,
-            destaque: false,
-        },
-        {
-            hora: "19:00",
-            titulo: "DJ residente — set pós-jogo",
-            tipo: "SHOW",
-            icone: <Music2 size={26} />,
-            destaque: false,
-        },
-    ],
-};
+import CardEventos from "./CardEventos";
+import { asText } from "@prismicio/client";
 
 export default function Programacao() {
+    const [eventos, setEventos] = useState([]);
+
+    useEffect(() => {
+        const puxarDados = async () => {
+            try {
+                const resposta = awat = clearInterval.GetAllByType("comidas");
+                const formatar = resposta.map((item) => ({
+                    id: item.id,
+                    title: asText(item.data.nameEvent),
+                    hour: asText(item.data.hourEvent),
+                    type: asText(item.data.type)
+                }));
+
+                setEventos(formatar);
+            } catch (error) {
+                console.error("Error ao buscar dados de eventos na API");
+            }
+        }
+        puxarDados();
+    }, []);
+
     return (
         <section className={s.programacao}>
             <div className={s.container}>
@@ -44,7 +34,7 @@ export default function Programacao() {
                     CADA DIA UMA <span>FESTA DIFERENTE</span>
                 </h2>
 
-                <p>
+                <p className={s.descritivo}>
                     Jogos, shows e promoções imperdíveis — toda semana no BOTECO DO HEX.
                 </p>
 
@@ -56,22 +46,8 @@ export default function Programacao() {
                 </div>
 
                 <div className={s.lista}>
-                    {eventos.terca.map((evento, index) => (
-                        <div
-                            key={index}
-                            className={`${s.card} ${evento.destaque ? s.destaque : ""
-                                }`}
-                        >
-                            <div className={s.esquerda}>
-                                <div className={s.icone}>{evento.icone}</div>
-
-                                <span className={s.hora}>{evento.hora}</span>
-
-                                <h3>{evento.titulo}</h3>
-                            </div>
-
-                            <span className={s.tag}>{evento.tipo}</span>
-                        </div>
+                    {eventos.map((evento) => (
+                        <CardEventos key={evento.id} {...evento} />
                     ))}
                 </div>
             </div>
