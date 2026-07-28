@@ -1,5 +1,5 @@
 import { Beer, Music2 } from "lucide-react";
-import s from "./EventoCard.module.scss";
+import s from "./CardEventos.module.scss";
 
 export default function CardEventos({
   hora,
